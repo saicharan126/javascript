@@ -1,0 +1,97 @@
+Javascript operators:
+1)Arthematic Operators: 
+Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, division, etc. These operators work on numerical values.
+
+
+
+List of Arithmetic Operators
+Operator	Description	Example	Result
++	Addition	5 + 3	8
+-	Subtraction	5 - 3	2
+*	Multiplication	5 * 3	15
+/	Division	5 / 2	2.5
+%	Modulus (Remainder)	5 % 2	1
+++	Increment (Add 1)	x++	x = x + 1
+--	Decrement (Subtract 1)	x--	x = x - 1
+**	Exponentiation (Power) (ES6)	2 ** 3	8
+
+2)ASSIGNMENT OPERATORS: Assignment operators are used to assign values to variables. These operators combine the act of assigning and, in some cases, performing operations like addition, subtraction, etc.
+Operator	Description	Example	Equivalent To
++=	Add and assign	x += 5;	x = x + 5;
+-=	Subtract and assign	x -= 5;	x = x - 5;
+*=	Multiply and assign	x *= 5;	x = x * 5;
+/=	Divide and assign	x /= 5;	x = x / 5;
+%=	Modulus and assign	x %= 5;	x = x % 5;
+**=	Exponentiation and assign (ES6)	x **= 3;	x = x ** 3;
+<<=	Left shift and assign	x <<= 2;	x = x << 2;
+>>=	Right shift and assign	x >>= 2;	x = x >> 2;
+&=	Bitwise AND and assign	x &= 3;	x = x & 3;
+`	=`	Bitwise OR and assign	`x
+^=	Bitwise XOR and assign	x ^= 3;	x = x ^ 3;
+
+3)LOGICAL OPERATORS:
+Logical operators are used to perform logical operations, primarily in decision-making and conditional statements. They operate on boolean values (true or false) and return a boolean result.
+AND &&
+0R ||
+NOT |
+4)Relational (comparision) operators:
+Relational operators, also called comparison operators, are used to compare two values or expressions. They return a boolean value: true if the condition is satisfied, or false otherwise.
+List of Relational Operators
+Operator	Description	Example	Result
+==	Equal to	5 == 5	true
+!=	Not equal to	5 != 3	true
+>	Greater than	5 > 3	true
+<	Less than	5 < 3	false
+>=	Greater than or equal to	5 >= 5	true
+<=	Less than or equal to	5 <= 3	false
+===	Strict equality (Type and Value)	5 === '5'	false
+!==	Strict inequality (Type and Value)	5 !== '5'	true
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a=5
+        // let b=2
+        // document.write(a*b,"<br>")
+        // document.write(a**b,"<br>")
+        // document.write(a/b,"<br>")
+        // document.write(a%b,"<br>")
+        // let a=5
+        // let b=2
+        // document.write(a>b && a>2,"<br>")
+        // document.write(a>b && a>12,"<br>")
+        // document.write(a>b || a>2,"<br>")
+        // document.write(a>b || a>12,"<br>")
+        // a+=40
+        // b-=5
+        // document.write(a,"<br>")
+        // document.write(b,"<br>")
+    //   let a=5
+    //   let b="5"
+    //   document.write(a==b,"<br>")
+    //   document.write(a!=b,"<br>")
+    //   document.write(a===b,"<br>")
+    //   document.write(a!==b,"<br>")
+    // let t=40
+    //   let r=(t>40)?'Ac-off': 'Ac-on'
+    //   let s=(t>20)?'Ac-off': 'Ac-on'
+    //   document.write(r , "<br>")
+    //   document.write(s,"<br>")
+    //   let a=prompt("enter your name: ")
+    //   alert(`my name is:${a}`)
+    // let a1=prompt()
+    // document.write(a1)
+    // document.write(typeof(a1),"<br>")
+    // let a2=prompt()
+    // document.write(a1+a2,"<br>")
+    
+    </script>
+</body>
+</html>
