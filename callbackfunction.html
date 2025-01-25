@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function mainfunction(callback){
+        //     document.write("Executing main function");
+        //     callback()
+        // }
+        // function callbackfunction(){
+        //     document.write("callback function executed")
+        // }
+        // mainfunction(callbackfunction);
+
+
+        // function greet(name,callback){
+        //     document.write("hello"+name);
+        //     callback();
+        // }
+        // function goodbye(){
+        //     document.write("goodbye")
+        // }
+        // greet("saicharan",goodbye);
+
+
+        // function greet(name,callback){
+        //     document.write("hello"+name);
+        //     callback();
+        // }
+        // greet("saicharan",function(){
+        //     document.write("goodbye!")
+        // });//anonymous function as callback
+
+
+        // function fetchData(callback){
+        //     document.write("Fetching Data..")
+        //     setTimeout(function(){
+        //         document.write("data fetched","<br>");
+        //         callback();
+
+        //     },2000)
+        // }
+        //     function processData(){
+        //         document.write("processing the fetched data..")
+        //     }
+        //     fetchData(processData);
+
+//using callback with array methods(map)
+        // const numbers=[1,2,3,4,5]
+        // const d=numbers.map(function(num){
+        //     return num*2
+
+        // })
+        // document.write(d)
+// map()is a built in array method that callback function to process eachitem in array
+// the callback here doubles eachnumber (num*2) and will result a new array with doubled values
+
+
+function registeruser(username,email,callback){
+    document.write("register user"+username);
+    setTimeout(function(){
+        document.write("user"+username+"registered successfully");
+        callback(email);
+    },2000);
+}
+function sendWelcomeEmail(email){
+    document.write("sending welcome email to"+email);
+};
+registeruser("saicharan","saicharan123@gmail.com",sendWelcomeEmail);
+
+
+
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
