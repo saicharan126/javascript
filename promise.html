@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let mypromise= new Promise((resolve, reject) => {
+        //     let success=false;
+        //     if(success){
+        //         resolve("The operation is successfull");
+
+        //     }else{
+        //         reject("The operation is failed")
+        //     }
+            
+        // })
+        // mypromise
+        // .then(result =>{
+        //     document.write(result);
+        // })
+        // .catch(error=>{
+        //     document.write(error)
+        //     console.log(error)
+        // });
+        
+
+
+        // let promise=new Promise((resolve, reject)=>{
+        //     resolve(5);
+
+        // })
+        // promise
+        // .then(result=>{
+        //     document.write(result)
+        //     return result*2//return a new value
+        // })
+        // .then(result=>{
+        //     document.write(result)
+        //     return result+3//return a new value
+        // })
+        // .then(result=>{
+        //     document.write(result)
+        // })
+        // .catch(error=>{
+        //     document.write("error",error)
+        // });
+        
+
+
+
+        //promise with set timeout
+        //asynchronous task using setTimeout,and the promise will resolve after a certain amount ad time
+         
+        let promise=new Promise((resolve,reject)=>{
+        resolve(5);
+    })
+    promise.then(result=>{
+        document.write(result)
+        setTimeout((promise)=>{
+            document.write("success")
+    },5000)
+})
+        
+
+    </script>
+</body>
+</html>
