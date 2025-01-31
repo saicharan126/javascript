@@ -6,48 +6,69 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h1 id ="a"> i am sai</h1>
-    <h1 id="b"> i am pardhu</h1>
-    <h1 id ="c">i am lohith</h1>
-    <script>
-        let x=document.getElementById('a')
-        console.log(x)
-    </script> -->
+    //  create a new element(single,multiple)
+    // append a element inside the parent code add the element at the end
+    // insertBefore ():
+    <!-- <div id="a">
+        <h1>saicharan</h1>
+        <h1 id="r">lohith</h1>
+     </div>
+     <div id="b">
+        <h2>pardhu</h2>
+        <h2>srinath</h2>
+        
+     </div>
+     <script>
+        let n=document.createElement("h1")
+        n.textContent="vignesh"
 
-    <!-- <h1 id ="a" class ="a"> i am sai</h1>
-    <h1 id="b" class ="b"> i am pardhu</h1>
-    <h1 id ="c" class="c">i am lohith</h1>
-    <h1 class="a"> iam srinath</h1>
-    <script>
-        let x=document.getElementById('h1')
-        console.log(x)
-        for(let i=0;i<x.length;i++){
-            console.log(x[i])
-        }
-        </script> -->
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+        
+        let nn=document.createElement("h1")
+        nn.innerText="mani"
 
+        let pp=document.getElementById('a')
+        let ll=document.getElementById('rr')
+        pp.insertBefore(nn,ll)
+        
+        console.log(pp,ll)
 
+     </script> -->
+     <!-- <div id="a">
+        <h1>saicharan</h1>
+        <h1 id="r">lohith</h1>
+     </div>
+     <div id="b">
+        <h2>pardhu</h2>
+        <h2>srinath</h2>
+        
+     </div>
 
-        <!-- <script>
-            let t=document.createElement('h2')
-            t.classname='tt'
-            t.textContent="hello lohith"
-            console.log(t)
-            document.body.appendChild(t)
+     <script>
+        let n=document.getElementById('a')
+        let l=document.getElementById('re')
+        console.log(l)
+        n.removeChild(l)
+        
+     </script> -->
 
-        </script> -->
-
-
-        <script>
-            const t=['sai','lohith','pardhu']
-            for(let i=0; i<t.length;i++){
-                let tt=document.createElement("h1")
-                tt.className="a"
-                tt.textContent=t[i];
-                console.log(tt)
-
-
-            }
-        </script>
-
-
+     <div id="a">
+        <h1>saicharan</h1>
+        <h1 id="r">lohith</h1>
+     </div>
+     <div id="b">
+        <h2>pardhu</h2>
+        <h2>srinath</h2>
+        
+     </div>
+     <script>
+        let n=document.createElement('h1')
+        n.innerText='version it'
+        let p=document.createElement('a')
+        p.replaceChild(n)
+        console.log(p)
+     </script>
+</body>
+</html>
