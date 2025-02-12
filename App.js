@@ -32,20 +32,57 @@
 // export default FruitList;
 
 
-import React,{useState} from 'react';
-//counter componenet
+// import React,{useState} from 'react';
+// //counter componenet
 
-const Counter=()=>{
-  const[count,setCount]=usestate(0);
-  //current state count
-  //
-  //usestate to initialize
-  return(
-    <div>
-      <h1>{count}</h1>
-      <button onClick={() =>setCount(count+1)}>Increment</button>
-      <button onClick={() =>setCount(count-1)}>Decrement</button>
-    </div>
-  )
+// const Counter=()=>{
+//   const[count,setCount]=usestate(0);
+//   //current state count
+//   //
+//   //usestate to initialize
+//   return(
+//     <div>
+//       <h1>{count}</h1>
+//       <button onClick={() =>setCount(count+1)}>Increment</button>
+//       <button onClick={() =>setCount(count-1)}>Decrement</button>
+//     </div>
+//   )
+// }
+// export default Counter;
+
+// import React from "react";
+
+// import Greeting from "./Greeting";
+
+// function App(){
+//   const isLoggedIn = true;
+
+//   return(
+//     <div className="App">
+//       <Greeting isLoggedIn={isLoggedIn}/>
+      
+//     </div>
+//   )
+// }
+// export default App;
+
+import {useState} from "react";
+
+import ChildA from "./ChildA"
+import ChildB from "./ChildB"
+
+const Parent=()=>{
+    const[count,setCount]=useState(0);
+    const increment=()=>{
+        setCount(c=>c+1);
+
+    }
+    return(
+        <div>
+            <ChildA/>
+            <ChildB count={count} increment={increment}/>
+        </div>
+
+    )
 }
-export default Counter;
+export default Parent;
