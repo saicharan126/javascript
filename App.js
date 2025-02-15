@@ -220,44 +220,77 @@
 // export default App;
 
 
-import React, { createContext, useContext } from "react";
+// import React, { createContext, useContext } from "react";
 
 
-const UserContext = createContext();
+// const UserContext = createContext();
+
+// function App() {
+//   const user = {
+//     name: "saicharan ",
+//     email: "charan@gmail.com"
+//   };
+
+//   return (
+//     <UserContext.Provider value={user}>
+//       <User1 />
+//     </UserContext.Provider>
+//   );
+// }
+
+// function User1() {
+//   return <User2 />;
+// }
+
+// function User2() {
+//   return <User3 />;
+// }
+
+// function User3() {
+//   return <Profile />;
+// }
+
+
+// function Profile() {
+//   const user = useContext(UserContext);
+  
+//   return (
+//     <div>
+//      <p>Name: {user.name}</p>
+//       <p>Email: {user.email}</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+import React, { useReducer } from 'react';
+import './App.css';
+import appleImage from './apple.jpg';
+
+function appleReducer(state = 3, action) {
+  switch (action.type) {
+    case 'ADD_APPLE':
+      return state + 1;
+    case 'EAT_APPLE':
+      return state - 1;
+    default:
+      return state;
+  }
+}
 
 function App() {
-  const user = {
-    name: "saicharan ",
-    email: "charan@gmail.com"
-  };
-
+  const [state, dispatch] = useReducer(appleReducer, 3);
   return (
-    <UserContext.Provider value={user}>
-      <User1 />
-    </UserContext.Provider>
-  );
-}
-
-function User1() {
-  return <User2 />;
-}
-
-function User2() {
-  return <User3 />;
-}
-
-function User3() {
-  return <Profile />;
-}
-
-
-function Profile() {
-  const user = useContext(UserContext);
-  
-  return (
-    <div>
-     <p>Name: {user.name}</p>
-      <p>Email: {user.email}</p>
+    <div style={{ textAlign: 'center', padding: '20px' }}>
+      <h1>Apple Counter</h1>
+      <p>NUMBER OF APPLES: {state}</p>
+      <div>
+        {Array.from({ length: state }).map((_, index) => (
+          <img key={index} src={appleImage} alt='Apple' style={{ width: '50px', height: '50px', margin: '5px' }} />
+        ))}
+      </div>
+      <button className='a' onClick={() => dispatch({ type: 'ADD_APPLE' })}>ADD APPLE</button>
+      <button className='b' onClick={() => dispatch({ type: 'EAT_APPLE' })}>EAT APPLE</button>
     </div>
   );
 }
