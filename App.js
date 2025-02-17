@@ -263,36 +263,167 @@
 // }
 
 // export default App;
-import React, { useReducer } from 'react';
-import './App.css';
-import appleImage from './apple.jpg';
+// import React, { useReducer } from 'react';
+// import './App.css';
+// import appleImage from './apple.jpg';
 
-function appleReducer(state = 3, action) {
-  switch (action.type) {
-    case 'ADD_APPLE':
-      return state + 1;
-    case 'EAT_APPLE':
-      return state - 1;
-    default:
-      return state;
-  }
-}
+// function appleReducer(state = 3, action) {
+//   switch (action.type) {
+//     case 'ADD_APPLE':
+//       return state + 1;
+//     case 'EAT_APPLE':
+//       return state - 1;
+//     default:
+//       return state;
+//   }
+// }
+
+// function App() {
+//   const [state, dispatch] = useReducer(appleReducer, 3);
+//   return (
+//     <div style={{ textAlign: 'center', padding: '20px' }}>
+//       <h1>Apple Counter</h1>
+//       <p>NUMBER OF APPLES: {state}</p>
+//       <div>
+//         {Array.from({ length: state }).map((_, index) => (
+//           <img key={index} src={appleImage} alt='Apple' style={{ width: '50px', height: '50px', margin: '5px' }} />
+//         ))}
+//       </div>
+//       <button className='a' onClick={() => dispatch({ type: 'ADD_APPLE' })}>ADD APPLE</button>
+//       <button className='b' onClick={() => dispatch({ type: 'EAT_APPLE' })}>EAT APPLE</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// import React, { useReducer } from 'react';
+// import './App.css';
+// import confetti from 'canvas-confetti';
+
+// function appleReducer(state, action) {
+//   switch (action.type) {
+//     case 'ADD_APPLE':
+//       return state + 1;
+//     case 'EAT_APPLE':
+//       return state > 0 ? state - 1 : state;
+//     default:
+//       return state;
+//   }
+// }
+
+// function App() {
+//   const [state, dispatch] = useReducer(appleReducer, 4);
+
+//   const handleEatApple = () => {
+//     if (state > 0) {
+//       dispatch({ type: 'EAT_APPLE' });
+//       confetti({
+//         particleCount: 100,
+//         spread: 70,
+//         origin: { y: 0.6 }
+//       });
+//     }
+//   };
+//   const handleAddApple = () => {
+//     if (state > 0) {
+//       confetti({
+//         particleCount: 200,
+//         spread: 70,
+//         origin: { y: 0.6 }
+//       });
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <center>
+//       <h1>NUMBER OF APPLES: {state}</h1>
+//       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+//         {Array.from({ length: state }).map((_, index) => (
+//           <img
+//             key={index}
+//             src="https://thumbs.dreamstime.com/b/red-apple-isolated-clipping-path-19130134.jpg"
+//             alt="Apple"
+//             style={{ width: '150px', height: '200px', margin: '5px' }}
+//           />
+//         ))}
+//       </div>
+//       <a onClick={handleAddApple}>
+//       <button className='a' onClick={() => dispatch({ type: 'ADD_APPLE' }) } >ADD APPLE</button>
+//      </a>
+//       {/* onClick={() => dispatch({ type: 'ADD_APPLE' }) }> */}
+        
+//       <button className='b' onClick={handleEatApple}>EAT APPLE</button>
+//       </center>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// function App(){
+//   const handleClick=()=>{
+//     alert("Button clicked")
+//   };
+//   return(
+//     <button onClick={handleClick}>click me</button>
+//   )
+// }
+// export default App;
+
+// import React,{useState} from "react";
+
+// function App(){
+//   const[text,setText] = useState("")
+  
+//   const handleChange = (event) => {
+//     setText(event.target.value)
+//   }
+
+//   return(
+//     <div>
+//       <input type="text" value={text} onChange={handleChange}/>
+//       <p>Your Text:{text}</p>
+//     </div>
+    
+//   )
+// }
+// export default App;
+
+
+import React, { useState } from 'react';
 
 function App() {
-  const [state, dispatch] = useReducer(appleReducer, 3);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Apple Counter</h1>
-      <p>NUMBER OF APPLES: {state}</p>
-      <div>
-        {Array.from({ length: state }).map((_, index) => (
-          <img key={index} src={appleImage} alt='Apple' style={{ width: '50px', height: '50px', margin: '5px' }} />
-        ))}
-      </div>
-      <button className='a' onClick={() => dispatch({ type: 'ADD_APPLE' })}>ADD APPLE</button>
-      <button className='b' onClick={() => dispatch({ type: 'EAT_APPLE' })}>EAT APPLE</button>
+    <div>
+      <button
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          backgroundColor: isHovered ? 'lightgrey' : 'lightblue',
+          color: isHovered ? 'black' : 'white',
+        }}
+      >Hover me</button>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
